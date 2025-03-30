@@ -6,5 +6,9 @@ def get_words(text):
 def count_characters(text):
     characters = {}
     for c in text:
-        characters[c] = 1
+        c = c.lower()
+        if c in characters:
+            characters[c] += 1
+        else:
+            characters[c] = 1
     return characters
